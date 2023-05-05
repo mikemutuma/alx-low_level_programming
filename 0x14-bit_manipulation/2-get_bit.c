@@ -1,0 +1,21 @@
+#include "main.h"
+
+/**
+ * get_bit - function returns bit of a decimal number
+ * @n: number
+ * @index: position of the bit
+ *
+ * Return: bit
+ */
+int get_bit(unsigned long int n, unsigned int index)
+{
+	int bit_val;
+
+	if (index > 63)
+		return (-1);
+
+	bit_val = (n >> index) & 1;
+
+	return (bit_val);
+}
+
